@@ -1,0 +1,40 @@
+{
+  "manifestVersion": 1,
+  "id": "my-extension-maks-dolgikh",
+  "publisher": "MaksDolgikhWebExtension",
+  "version": "1.0.0",
+  "scopes": [
+    "vso.code_full",
+    "vso.graph_manage",
+    "vso.project_manage",
+    "vso.identity_manage",
+    "vso.security_manage"
+  ],
+  "name": "Test extension for creating repos",
+  "public": false,
+  "categories": ["Azure Repos"],
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "my-hub",
+      "type": "ms.vss-web.hub",
+      "targets": [
+        "ms.vss-code-web.code-hub-group"
+      ],
+      "properties": {
+        "name": "test - create repo",
+        "uri": "build/index.html"
+      }
+    }
+  ],
+  "files": [
+    {
+      "path": "build",
+      "addressable": true
+    }
+  ]
+}
